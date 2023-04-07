@@ -60,6 +60,7 @@ let s:spaceOrange = {'gui': '#F66100', 'cterm256': '202'}
 let s:spaceRed = {'gui': '#821A1A', 'cterm256': '1'}
 let s:spaceRed2 = {'gui': '#FF0000', 'cterm256': '196'}
 let s:none = {'gui': 'NONE', 'cterm256': 'NONE'}
+let s:ex_black = {'gui': 'NONE', 'cterm256': 'NONE'}
 
 " ==========================
 " Definitions
@@ -68,27 +69,27 @@ let s:none = {'gui': 'NONE', 'cterm256': 'NONE'}
 
 " Editor
 call <sid>hi('ColorColumn', s:none, s:spaceGray1, 'none')
-call <sid>hi('Cursor', s:spaceBlack, s:spaceSteel, 'none')
+call <sid>hi('Cursor', s:ex_black, s:spaceSteel, 'none')
 call <sid>hi('CursorColumn', s:none, s:spaceGray1, 'none')
 call <sid>hi('CursorLine', s:none, s:spaceGray1, 'none')
 call <sid>hi('CursorLineNr', s:spaceSteel, s:spaceGray1, 'none')
-call <sid>hi('Directory', s:spaceBlue, s:spaceBlack, 'none')
+call <sid>hi('Directory', s:spaceBlue, s:ex_black, 'none')
 call <sid>hi('FoldColumn', s:none, s:spaceGray1, 'none')
 call <sid>hi('Folded', s:spaceGray3, s:none, 'none')
-call <sid>hi('IncSearch', s:spaceBlack, s:spaceBlue2, 'none')
+call <sid>hi('IncSearch', s:ex_black, s:spaceBlue2, 'none')
 call <sid>hi('LineNr', s:spaceGray3, s:spaceBlack2, 'none')
 call <sid>hi('MatchParen', s:spaceWhite, s:spaceGray3, 'none')
-call <sid>hi('Normal', s:spaceWhite, s:spaceBlack, 'none')
+call <sid>hi('Normal', s:spaceWhite, s:ex_black, 'none')
 call <sid>hi('Pmenu', s:none, s:spaceBlack2, 'none')
 call <sid>hi('PmenuSel', s:none, s:spaceGray2, 'none')
-call <sid>hi('Search', s:spaceBlack, s:spaceBlue, 'none')
+call <sid>hi('Search', s:ex_black, s:spaceBlue, 'none')
 call <sid>hi('SignColumn', s:none, s:spaceBlack2, 'none')
-call <sid>hi('StatusLine', s:spaceBlack, s:spaceSteel, 'none')
+call <sid>hi('StatusLine', s:ex_black, s:spaceSteel, 'none')
 call <sid>hi('StatusLineNC', s:spaceGray3, s:spaceBlack2, 'none')
 call <sid>hi('VertSplit', s:spaceGray3, s:spaceGray3, 'none')
 call <sid>hi('Visual', s:none, s:spaceGray2, 'none')
 call <sid>hi('TabLine', s:spaceSteel, s:spaceGray2, 'none')
-call <sid>hi('TabLineFill', s:spaceBlack, s:spaceBlack, 'none')
+call <sid>hi('TabLineFill', s:ex_black, s:ex_black, 'none')
 
 " General
 call <sid>hi('Boolean', s:spaceGoo, s:none, 'none')
@@ -97,8 +98,8 @@ call <sid>hi('Comment', s:spaceGray3, s:none, 'none')
 call <sid>hi('Conditional', s:spaceViolet, s:none, 'none')
 call <sid>hi('Constant', s:spaceOrange, s:none, 'none')
 call <sid>hi('Define', s:spaceViolet, s:none, 'none')
-call <sid>hi('DiffAdd', s:spaceBlack, s:spaceGreen, 'none')
-call <sid>hi('DiffChange', s:spaceBlack, s:spaceGold, 'none')
+call <sid>hi('DiffAdd', s:ex_black, s:spaceGreen, 'none')
+call <sid>hi('DiffChange', s:ex_black, s:spaceGold, 'none')
 call <sid>hi('DiffDelete', s:spaceWhite, s:spaceRed, 'none')
 call <sid>hi('DiffText', s:spaceGray1, s:spaceBlue, 'none')
 call <sid>hi('ErrorMsg', s:spaceWhite, s:spaceRed, 'none')
@@ -107,12 +108,12 @@ call <sid>hi('Function', s:spaceBlue, s:none, 'none')
 call <sid>hi('Identifier', s:spaceGold, s:none, 'none')
 call <sid>hi('Keyword', s:spaceGold, s:none, 'none')
 call <sid>hi('Label', s:spaceGreen, s:none, 'none')
-call <sid>hi('NonText', s:spaceGray1, s:spaceBlack, 'none')
+call <sid>hi('NonText', s:spaceGray1, s:ex_black, 'none')
 call <sid>hi('Number', s:spaceGoo, s:none, 'none')
 call <sid>hi('Operator', s:spaceViolet, s:none, 'none')
 call <sid>hi('PreProc', s:spaceViolet, s:none, 'none')
 call <sid>hi('Special', s:spaceWhite, s:none, 'none')
-call <sid>hi('SpecialKey', s:spaceGray1, s:spaceBlack, 'none')
+call <sid>hi('SpecialKey', s:spaceGray1, s:ex_black, 'none')
 call <sid>hi('SpellBad', s:spaceRed2, s:none, 'italic,undercurl')
 call <sid>hi('SpellCap', s:spaceBlue, s:none, 'italic,undercurl')
 call <sid>hi('SpellLocal', s:spaceOrange, s:none, 'undercurl')
@@ -128,8 +129,8 @@ call <sid>hi('WarningMsg', s:spaceWhite, s:spaceRed, 'none')
 
 " Diff Mode
 if &diff
-  call <sid>hi('DiffAdd', s:spaceBlack, s:spaceGreen, 'none')
-  call <sid>hi('DiffChange', s:spaceBlack, s:spaceGold, 'none')
+  call <sid>hi('DiffAdd', s:ex_black, s:spaceGreen, 'none')
+  call <sid>hi('DiffChange', s:ex_black, s:spaceGold, 'none')
   call <sid>hi('DiffDelete', s:spaceRed2, s:spaceRed, 'none')
   call <sid>hi('DiffText', s:spaceGray1, s:spaceBlue, 'none')
 else
@@ -378,7 +379,7 @@ call <sid>hi('TodoProject', s:spaceViolet, s:none, 'none')
 
 " Buftabline
 call <sid>hi('BufTabLineActive', s:spaceSteel, s:spaceGray2, 'none')
-call <sid>hi('BufTabLineCurrent', s:spaceBlack, s:spaceGray4, 'none')
-call <sid>hi('BufTabLineFill', s:spaceBlack, s:spaceBlack, 'none')
+call <sid>hi('BufTabLineCurrent', s:ex_black, s:spaceGray4, 'none')
+call <sid>hi('BufTabLineFill', s:ex_black, s:ex_black, 'none')
 call <sid>hi('BufTabLineHidden', s:spaceGray3, s:spaceBlack2, 'none')
 
