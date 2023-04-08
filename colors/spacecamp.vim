@@ -61,6 +61,7 @@ let s:spaceRed = {'gui': '#821A1A', 'cterm256': '1'}
 let s:spaceRed2 = {'gui': '#FF0000', 'cterm256': '196'}
 let s:none = {'gui': 'NONE', 'cterm256': 'NONE'}
 let s:ex_black = {'gui': 'NONE', 'cterm256': 'NONE'}
+let s:ex_black2 = {'gui': 'NONE', 'cterm256': 'NONE'}
 
 " ==========================
 " Definitions
@@ -77,15 +78,15 @@ call <sid>hi('Directory', s:spaceBlue, s:ex_black, 'none')
 call <sid>hi('FoldColumn', s:none, s:spaceGray1, 'none')
 call <sid>hi('Folded', s:spaceGray3, s:none, 'none')
 call <sid>hi('IncSearch', s:ex_black, s:spaceBlue2, 'none')
-call <sid>hi('LineNr', s:spaceGray3, s:spaceBlack2, 'none')
+call <sid>hi('LineNr', s:spaceGray3, s:ex_black2, 'none')
 call <sid>hi('MatchParen', s:spaceWhite, s:spaceGray3, 'none')
 call <sid>hi('Normal', s:spaceWhite, s:ex_black, 'none')
 call <sid>hi('Pmenu', s:none, s:spaceBlack2, 'none')
 call <sid>hi('PmenuSel', s:none, s:spaceGray2, 'none')
 call <sid>hi('Search', s:ex_black, s:spaceBlue, 'none')
-call <sid>hi('SignColumn', s:none, s:spaceBlack2, 'none')
-call <sid>hi('StatusLine', s:ex_black, s:spaceSteel, 'none')
-call <sid>hi('StatusLineNC', s:spaceGray3, s:spaceBlack2, 'none')
+call <sid>hi('SignColumn', s:none, s:ex_black2, 'none')
+call <sid>hi('StatusLine', s:spaceGray2, s:none, 'none')
+call <sid>hi('StatusLineNC', s:spaceGray3, s:ex_black2, 'none')
 call <sid>hi('VertSplit', s:spaceGray3, s:spaceGray3, 'none')
 call <sid>hi('Visual', s:none, s:spaceGray2, 'none')
 call <sid>hi('TabLine', s:spaceSteel, s:spaceGray2, 'none')
@@ -381,5 +382,5 @@ call <sid>hi('TodoProject', s:spaceViolet, s:none, 'none')
 call <sid>hi('BufTabLineActive', s:spaceSteel, s:spaceGray2, 'none')
 call <sid>hi('BufTabLineCurrent', s:ex_black, s:spaceGray4, 'none')
 call <sid>hi('BufTabLineFill', s:ex_black, s:ex_black, 'none')
-call <sid>hi('BufTabLineHidden', s:spaceGray3, s:spaceBlack2, 'none')
+call <sid>hi('BufTabLineHidden', s:spaceGray3, s:ex_black2, 'none')
 
